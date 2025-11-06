@@ -1,0 +1,6 @@
+---
+profile: production
+offline: true
+
+skip_list:
+  - yaml[line-length]
