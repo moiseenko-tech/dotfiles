@@ -16,6 +16,14 @@ The common location for the config file is `.ansible-lint`
 
 If Ansible Lint cannot find a configuration file in the current directory it attempts to locate it in a parent directory. However Ansible Lint does not try to load configuration that is outside the git repository.
 
+### Black
+
+https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
+
+Black is a code formatter for Python that automatically enforces a consistent code style.
+
+Black is configured via the `pyproject.toml` file.
+
 ### Vim
 
 https://github.com/vim/vim/blob/master/runtime/doc/options.txt
