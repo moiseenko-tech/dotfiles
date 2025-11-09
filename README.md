@@ -24,6 +24,14 @@ Black is a code formatter for Python that automatically enforces a consistent co
 
 Black is configured via the `pyproject.toml` file.
 
+### Ruff
+
+https://docs.astral.sh/ruff/configuration/
+
+An extremely fast Python linter and code formatter, written in Rust.
+
+Ruff is best configured via the `pyproject.toml` file — this way you can ship the same settings with your project, ensuring consistent behavior for all developers and in CI/CD environments.
+
 ### Vim
 
 https://github.com/vim/vim/blob/master/runtime/doc/options.txt

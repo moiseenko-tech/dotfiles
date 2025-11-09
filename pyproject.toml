@@ -1,3 +1,133 @@
 [tool.black]
 line-length = 100
 target-version = ["py314"]
+
+[tool.ruff]
+extend-exclude = ["__pycache__"]
+
+# Same as Black
+line-length = 100
+indent-width = 4
+target-version = "py314"
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs
+indent-style = "space"
+
+# Like Black, respect magic trailing commas
+skip-magic-trailing-comma = false
+
+# Like Black, automatically detect the appropriate line ending
+line-ending = "auto"
+
+# docstring-code-format = false
+# docstring-code-line-length = "dynamic"
+
+[tool.ruff.lint]
+# List of enabled rules.
+# https://docs.astral.sh/ruff/rules/
+select = [
+    "ERA",      # eradicate
+    "YTT",      # flake8-2020
+    "ANN",      # flake8-annotations
+    "ASYNC",    # flake8-async
+    "S",        # flake8-bandit
+    "BLE",      # flake8-blind-except
+    "FBT",      # flake8-boolean-trap
+    "B",        # flake8-bugbear
+    "A",        # flake8-builtins
+    "COM",      # flake8-commas
+    "C4",       # flake8-comprehensions
+    "DTZ",      # flake8-datetimez
+    "T10",      # flake8-debugger
+    "EM",       # flake8-errmsg
+    "EXE",      # flake8-executable
+    "FIX",      # flake8-fixme
+    "INT",      # flake8-gettext
+    "ISC",      # flake8-implicit-str-concat
+    "ICN",      # flake8-import-conventions
+    "LOG",      # flake8-logging
+    "G",        # flake8-logging-format
+    "INP",      # flake8-no-pep420
+    "PIE",      # flake8-pie
+    "T20",      # flake8-print
+    "PT",       # flake8-pytest-style
+    "Q",        # flake8-quotes
+    "RSE",      # flake8-raise
+    "RET",      # flake8-return
+    "SLF",      # flake8-self
+    "SIM",      # flake8-simplify
+    "SLOT",     # flake8-slots
+    "TID",      # flake8-tidy-imports
+    "TD",       # flake8-todos
+    "TC",       # flake8-type-checking
+    "ARG",      # flake8-unused-arguments
+    "PTH",      # flake8-use-pathlib
+    "FLY",      # flynt
+    "I",        # isort
+    "C90",      # mccabe
+    "N",        # pep8-naming
+    "PERF",     # Perflint
+    "E",        # pycodestyle (Error)
+    "W",        # pycodestyle (Warning)
+    "D",        # pydocstyle
+    "F",        # Pyflakes
+    "PGH",      # pygrep-hooks
+    "PL",       # Pylint (PLC, PLR, PLE, PLW)
+    "UP",       # pyupgrade
+    "FURB",     # refurb
+    "RUF",      # Ruff-specific rules
+    "TRY",      # tryceratops
+
+    # Software and versions related
+    # "AIR",    # Airflow
+    # "FAST",   # FastAPI
+    # "DJ",     # flake8-django
+    # "FA",     # flake8-future-annotations
+    # "PYI",    # flake8-pyi
+    # "NPY",    # NumPy-specific rules
+    # "PD",     # pandas-vet
+
+    # Only available in preview
+    # "CPY",    # flake8-copyright
+    # "DOC",    # pydoclint
+]
+
+ignore = [
+    "D107",     # undocumented-public-init
+    "FIX002",   # line-contains-todo
+    "TD003",    # missing-todo-link
+
+    # WARNING: Docstring rules temporarily disabled for rapid prototyping.
+    #          These MUST be restored before release. Shipping without them
+    #          is strictly prohibited.
+    "D100",  # undocumented-public-module
+    "D101",  # undocumented-public-class
+    "D102",  # undocumented-public-method
+    "D103",  # undocumented-public-function
+    "D104",  # undocumented-public-package
+    "D105",  # undocumented-magic-method
+    "D106",  # undocumented-public-nested-class
+]
+
+# Allow fix for all enabled rules (when --fix is provided)
+fixable = ["ALL"]
+unfixable = []
+
+# Only ignore variables named "_".
+dummy-variable-rgx = "^_$"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+    "D104",     # undocumented-public-package
+    "S101",     # assert
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
