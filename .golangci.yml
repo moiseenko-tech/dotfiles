@@ -1,0 +1,96 @@
+---
+# Defines the configuration version.
+# The only possible value is "2".
+version: "2"
+
+linters:
+  # Default set of linters.
+  # Allowed values: standard | all | none | fast
+  # Default: standard
+  default: standard 
+
+  # Enable specific linters.
+  default: standard
+  enable:
+    - staticcheck
+    - errcheck
+    - ineffassign
+    - gosimple
+    - unused
+    - revive
+    - typecheck
+    - gosec
+    - depguard
+    - forbidigo
+
+  # Disable specific linters.
+  disable:
+    - wsl # Deprecated since v2.2.0
+
+  # All available settings of specific linters.
+  settings:
+    cyclop:
+      max-complexity: 10
+    dupl:
+      threshold: 100
+    gocritic:
+      enable-all: true
+      disabled-tags:
+        - experimental
+    govet:
+      enable-all: true
+      disable: []
+      settings:
+        shadow:
+          strict: true
+
+formatters:
+  enable:
+    - gofumpt   # Stricter and more consistent formatter than gofmt
+    - gci       # Manages and sorts import sections (std, external, local)
+    - golines   # Wraps long lines for better readability
+
+  # Formatters settings.
+  settings:
+    golines:
+      max-len: 100
+      tab-len: 8
+      shorten-comments: false
+      reformat-tags: true
+      chain-split-dots: true
+
+issues:
+  # Maximum issues count per one linter.
+  max-issues-per-linter: 0
+
+  # Maximum count of issues with the same text.
+  max-same-issues: 0
+
+  # Make issues output unique by line.
+  uniq-by-line: false
+
+  # Show only new issues: if there are unstaged changes or untracked files,
+  # only those changes are analyzed, else only changes in HEAD~ are analyzed.
+  new: false
+
+  # Fix found issues (if it's supported by the linter).
+  fix: false
+
+output:
+  sort_order:
+    - linter
+    - severity
+    - file # filepath, line, and column.
+  show-stats: false
+
+run:
+  timeout: 5m
+  relative-path-mode: gomod
+  issues-exit-code: 2
+  tests: true
+  allow-parallel-runners: true
+  go: "1.25"
+  concurrency: 4
+
+severity:
+  default: warning
