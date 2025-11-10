@@ -24,6 +24,14 @@ Black is a code formatter for Python that automatically enforces a consistent co
 
 Black is configured via the `pyproject.toml` file.
 
+### Golangci-lint
+
+https://golangci-lint.run/docs/configuration/file/
+
+golangci-lint is a fast and flexible linter aggregator for Go that runs many static analysis tools at once.
+
+It is usually configured with a `.golangci.yml` file placed in the project root. You can also keep it in your home directory to apply the same rules across multiple projects.
+
 ### Ruff
 
 https://docs.astral.sh/ruff/configuration/
