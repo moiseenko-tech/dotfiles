@@ -53,6 +53,13 @@ It is usually configured with a `.yamllint` file.
 
 yamllint looks for this file in the current directory, then in parent directories, and so on — the search stops at the user’s home or the filesystem root.
 
+## 🚧 TODO
+
+* curl
+* git
+* tmux
+* wget
+
 ## ⚖️ License
 
  Licensed under [CC0 1.0](LICENSE) — feel free to copy, modify, and use these configs freely 💚.
