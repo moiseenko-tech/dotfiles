@@ -58,6 +58,7 @@ yamllint looks for this file in the current directory, then in parent directorie
 * curl
 * git
 * tmux
+* vscode
 * wget
 
 ## ⚖️ License
