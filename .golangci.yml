@@ -53,14 +53,14 @@ linters:
 
 formatters:
   # Enable specific formatters.
-  # Default: [] (uses standard Go formatting) 
+  # Default: [] (uses standard Go formatting)
   enable:
     # Stricter and more consistent formatter than gofmt.
     - gofumpt
     # Manages and sorts import sections (std, external, local).
     - gci
     # Wraps long lines for better readability.
-    - golines 
+    - golines
 
   settings:
     gofumpt:
@@ -82,7 +82,7 @@ formatters:
         # Default section: contains all imports that could not be matched to another section type.
         - default
         # Custom section: groups all imports with the specified Prefix.
-        #- prefix(github.com/org/project)
+        # - prefix(github.com/org/project)
       # Checks that no inline comments are present.
       # Default: false
       no-inline-comments: false
@@ -139,19 +139,19 @@ issues:
 
   # Show only new issues created after the best common ancestor (merge-base against HEAD).
   # Default: ""
-  #new-from-merge-base: "main"
+  # new-from-merge-base: "main"
 
   # Show only new issues created after git revision `REV`.
   # Default: ""
-  #new-from-rev: HEAD
+  # new-from-rev: HEAD
 
   # Show only new issues created in git patch with set file path.
   # Default: ""
-  #new-from-patch: path/to/patch/file
+  # new-from-patch: path/to/patch/file
 
   # Show issues in any part of update files (requires new-from-rev or new-from-patch).
   # Default: false
-  #whole-files: true
+  # whole-files: true
 
   # Apply the fixes detected by the linters and formatters (if it's supported by the linter).
   # Default: false
