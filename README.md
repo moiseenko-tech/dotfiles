@@ -8,7 +8,7 @@ These are my personal configuration files that I use every day. I keep them here
 | -------- | ------- | ------- | ------- |
 | Ansible Lint | 🟢 Ready to use | Linter for Ansible playbooks and roles| 📚 [Configuration](https://ansible.readthedocs.io/projects/lint/configuring/) |
 | Black | 🟢 Ready to use | Python code formatter | 📚 [ Configuration via a file](https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file) |
-| Golangci-lint | 🟠 Work in progress | Go linter | 📚 [Configuration File](https://golangci-lint.run/docs/configuration/file/) |
+| Golangci-lint | 🟢 Ready to use | Go linter | 📚 [Configuration File](https://golangci-lint.run/docs/configuration/file/) |
 | Ruff | 🟢 Ready to use | Python linter and code formatter | 📚 [Configuring&nbsp;Ruff](https://docs.astral.sh/ruff/configuration/) |
 | Vim | 🟢 Ready to use | Text editor | 📚 [Options](https://github.com/vim/vim/blob/master/runtime/doc/options.txt) |
 | yamllint | 🟢 Ready to use | YAML linter | 📚 [Configuration](https://yamllint.readthedocs.io/en/stable/configuration.html) |
