@@ -55,11 +55,13 @@ yamllint looks for this file in the current directory, then in parent directorie
 
 ## 🚧 TODO
 
-* curl
-* git
-* tmux
-* vscode
-* wget
+| Software    | Status | Description | Documentation |
+| -------- | ------- | ------- | ------- |
+| curl | ⚪ Planned | | |
+| git | ⚪ Planned | | |
+| tmux | ⚪ Planned | | |
+| vscode | ⚪ Planned | | |
+| wget | ⚪ Planned | | |
 
 ## ⚖️ License
 
