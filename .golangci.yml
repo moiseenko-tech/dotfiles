@@ -47,6 +47,8 @@ linters:
           arguments: [120]
 
         # Disabled rules.
+        - name: add-constant
+          disabled: true
         - name: cyclomatic
           disabled: true
         - name: flag-parameter
