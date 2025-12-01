@@ -37,14 +37,16 @@ linters:
   # All available settings of specific linters.
   settings:
     revive:
-      severity: warning
       enable-all-rules: true
       rules:
         # Settings for enabled rules.
         - name: line-length-limit
-          severity: warning
           disabled: false
-          arguments: [120]
+          arguments: [200]
+        - name: unhandled-error
+          disabled: false
+          arguments:
+            - "^fmt.Printf"
 
         # Disabled rules.
         - name: add-constant
