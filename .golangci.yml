@@ -36,6 +36,11 @@ linters:
 
   # All available settings of specific linters.
   settings:
+    govet:
+      enable-all: true
+      disable:
+        - fieldalignment
+
     revive:
       enable-all-rules: true
       rules:
@@ -43,7 +48,6 @@ linters:
         - name: line-length-limit
           disabled: false
           arguments: [200]
-
         # Disabled rules.
         - name: add-constant
           disabled: true
