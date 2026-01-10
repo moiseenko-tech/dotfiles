@@ -1,0 +1,40 @@
+---
+# Default state for all rules
+default: true
+
+# Path to configuration file to extend
+extends: null
+
+# Line length
+MD013:
+  # Number of characters
+  line_length: 180
+  # Number of characters for headings
+  heading_line_length: 80
+  # Number of characters for code blocks
+  code_block_line_length: 80
+  # Include code blocks
+  code_blocks: true
+  # Include tables
+  tables: false
+  # Include headings
+  headings: true
+  # Strict length checking
+  strict: false
+  # Stern length checking
+  stern: false
+
+# Inline HTML
+MD033:
+  # Allowed elements
+  allowed_elements: []
+  # Allowed elements in tables
+  table_allowed_elements:
+    - br
+
+# Table column style
+MD060:
+  # Table column style
+  style: compact
+  # Aligned delimiter columns
+  aligned_delimiter: true
