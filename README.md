@@ -9,6 +9,7 @@ These are my personal configuration files that I use every day. I keep them here
 | Ansible Lint | 🟢 Ready to use | Linter for Ansible playbooks and roles| 📚 [Configuration](https://ansible.readthedocs.io/projects/lint/configuring/) |
 | Black | 🟢 Ready to use | Python code formatter | 📚 [ Configuration via a file](https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file) |
 | Golangci-lint | 🟢 Ready to use | Go linter | 📚 [Configuration File](https://golangci-lint.run/docs/configuration/file/) |
+| MarkdownLint | 🟢 Ready to use | Lint tool for Markdown | 📚 [Rules](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md) |
 | Ruff | 🟢 Ready to use | Python linter and code formatter | 📚 [Configuring&nbsp;Ruff](https://docs.astral.sh/ruff/configuration/) |
 | Vim | 🟢 Ready to use | Text editor | 📚 [Options](https://github.com/vim/vim/blob/master/runtime/doc/options.txt) |
 | yamllint | 🟢 Ready to use | YAML linter | 📚 [Configuration](https://yamllint.readthedocs.io/en/stable/configuration.html) |
@@ -34,6 +35,14 @@ Black is configured via the `pyproject.toml` file.
 golangci-lint is a fast and flexible linter aggregator for Go that runs many static analysis tools at once.
 
 It is usually configured with a `.golangci.yml` file placed in the project root. You can also keep it in your home directory to apply the same rules across multiple projects.
+
+### MarkdownLint
+
+markdownlint is a linter for Markdown files that checks for formatting issues and enforces consistent style.
+
+It is usually configured with a `.markdownlint.yaml` file placed in the project root.
+
+markdownlint-cli looks for `.markdownlint.jsonc`, `.markdownlint.json`, `.markdownlint.yaml`, or `.markdownlint.yml` in the current directory. For `.markdownlintrc` files, it also searches parent directories.
 
 ### Ruff
 
