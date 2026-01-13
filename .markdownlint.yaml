@@ -24,6 +24,11 @@ MD013:
   # Stern length checking
   stern: false
 
+# Multiple headings with the same content
+MD024:
+  # Only check sibling headings
+  siblings_only: true
+
 # Inline HTML
 MD033:
   # Allowed elements
