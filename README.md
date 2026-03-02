@@ -62,6 +62,16 @@ It is usually configured with a `.yamllint` file.
 
 yamllint looks for this file in the current directory, then in parent directories, and so on — the search stops at the user’s home or the filesystem root.
 
+## 🤖 AI
+
+### Claude Code
+
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) is Anthropic's official CLI for Claude. It reads project-level instructions from a `CLAUDE.md` file placed in the repository root or other well-known locations.
+
+The `claude/CLAUDE.md` file in this repo contains my global conventions that apply to every project: commit style, versioning, release workflow, language rules, linting requirements, and language-specific standards for Python and Go.
+
+Place it (or symlink it) at `~/.claude/CLAUDE.md` to have Claude Code automatically load these conventions in every session. On top of that, individual repositories can have their own `CLAUDE.md` in the project root for per-project instructions — Claude Code merges both files automatically.
+
 ## 🚧 TODO
 
 | Software    | Status | Description | Documentation |
