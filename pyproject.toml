@@ -1,12 +1,12 @@
 [tool.black]
-line-length = 100
+line-length = 120
 target-version = ["py314"]
 
 [tool.ruff]
 extend-exclude = ["__pycache__"]
 
 # Same as Black
-line-length = 100
+line-length = 120
 indent-width = 4
 target-version = "py314"
 
@@ -98,6 +98,7 @@ select = [
 
 ignore = [
     "D107",     # undocumented-public-init
+    "EM101",    # exception-string-literal
     "FIX002",   # line-contains-todo
     "TD003",    # missing-todo-link
 
@@ -122,8 +123,27 @@ dummy-variable-rgx = "^_$"
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = [
+    "ANN001",   # missing-type-annotation-for-argument
+    "ANN201",   # missing-return-type-annotation
+    "ARG001",   # unused-function-argument
+    "D100",     # undocumented-public-module
     "D104",     # undocumented-public-package
+    "PLR2004",  # magic-value-comparison
     "S101",     # assert
+    "S105",     # hardcoded-password-string
+    "S106",     # hardcoded-password-func-arg
+    "SLF001",   # private-member-access
+]
+
+"scripts/*" = [
+    "B007",     # unused-loop-control-variable
+    "BLE001",   # blind-except
+    "PLR0915",  # too-many-statements
+    "PLR2004",  # magic-value-comparison
+    "RUF001",   # ambiguous-unicode-character-string
+    "S608",     # hardcoded-sql-expression
+    "T201",     # print
+    "TRY300",   # try-consider-else
 ]
 
 [tool.ruff.lint.mccabe]
@@ -131,3 +151,6 @@ max-complexity = 10
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
+
+[tool.uv]
+package = true
