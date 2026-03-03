@@ -118,11 +118,12 @@ This section does not apply to CLI tools, scripts, or linter configs.
 
 ## Python projects
 
-- For new projects, prefer [uv](https://github.com/astral-sh/uv) as the package manager.
+- For new projects, prefer [uv](https://github.com/astral-sh/uv) as the package manager. Use [hatchling](https://hatch.pypa.io/) as the build backend.
 - Linter: [ruff](https://github.com/astral-sh/ruff).
 - Formatter: [black](https://github.com/psf/black).
 - Type hints are mandatory throughout the codebase.
 - Testing framework: [pytest](https://pytest.org/) (pure pytest, no additional test frameworks).
+- Tests follow the **AAA pattern** (Arrange-Act-Assert): each test has three clearly separated sections with a blank line before the `assert` block.
 - Database migrations: [Alembic](https://alembic.sqlalchemy.org/).
 
 ### Project structure
