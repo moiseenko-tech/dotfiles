@@ -122,7 +122,7 @@ unfixable = []
 dummy-variable-rgx = "^_$"
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*" = [
+"tests/**" = [
     "ANN001",   # missing-type-annotation-for-argument
     "ANN201",   # missing-return-type-annotation
     "ARG001",   # unused-function-argument
@@ -133,6 +133,11 @@ dummy-variable-rgx = "^_$"
     "S105",     # hardcoded-password-string
     "S106",     # hardcoded-password-func-arg
     "SLF001",   # private-member-access
+    # In tests, imports are used at runtime (e.g. in fixture type annotations,
+    # parametrize values, isinstance checks), so wrapping them in TYPE_CHECKING
+    # would cause NameError at runtime. Direct imports are correct here.
+    "TC001",    # move-application-import-into-type-checking-block
+    "TC002",    # move-third-party-import-into-type-checking-block
 ]
 
 "scripts/*" = [
