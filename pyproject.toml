@@ -138,6 +138,7 @@ dummy-variable-rgx = "^_$"
     # would cause NameError at runtime. Direct imports are correct here.
     "TC001",    # move-application-import-into-type-checking-block
     "TC002",    # move-third-party-import-into-type-checking-block
+    "TC003",    # move-standard-library-import-into-type-checking-block
 ]
 
 "scripts/*" = [
