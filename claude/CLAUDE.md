@@ -1,5 +1,28 @@
 # Global conventions
 
+## Working style
+
+**Never start writing or modifying code without explicit approval.**
+
+When the user asks a question, describes a problem, or raises a topic related to development or bug fixes — stop, think, and discuss first. Do not jump to implementation. Instead:
+
+1. Ask clarifying questions if the task is ambiguous.
+2. Propose an approach or outline the changes you plan to make.
+3. Wait for the user to explicitly say to proceed (e.g. "go ahead", "do it", "implement it").
+
+Only begin writing code, editing files, or running commands when the user has clearly given the go-ahead.
+
+### Development cycle
+
+For any non-trivial task (more than one logical step):
+
+1. **Plan first.** Before touching any code, present a numbered step-by-step plan. Wait for explicit approval before starting.
+2. **One step at a time.** Execute exactly one step, then stop. Describe what was done and what comes next. Wait for the user's go-ahead before proceeding.
+3. **Tests before implementation.** Writing tests and writing the implementation are always separate steps, in that order. Never bundle them into one step.
+4. **Step size.** Steps should be balanced — small enough to review comfortably, large enough to be meaningful. A step is one logical unit of work (e.g. writing tests for a feature, adding a migration, wiring up a new adapter).
+
+For trivial single-step tasks, no plan is required — but the go-ahead rule still applies.
+
 ## Code and documentation language
 
 All code, comments, docstrings, and documentation must be written in American English.
