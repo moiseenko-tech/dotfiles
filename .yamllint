@@ -6,6 +6,9 @@ yaml-files:
 
 extends: default
 
+ignore: |
+  .venv/
+
 rules:
   braces:
     max-spaces-inside: 1
