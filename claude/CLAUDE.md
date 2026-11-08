@@ -58,6 +58,14 @@ All commits must follow the [Conventional Commits](https://www.conventionalcommi
 
 Examples: `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `test:`, `ci:`.
 
+Every commit must include a short body describing what was done and why. Keep it concise and to the point — one or a few sentences as needed:
+
+```
+docs: add 04-minikube.md
+
+Add notes on setting up and using Minikube for local Kubernetes development.
+```
+
 Commit footers include references to related tickets:
 
 ```
@@ -65,6 +73,13 @@ Refs: JIRA-1234, JIRA-1268
 ```
 
 Do not add `Co-Authored-By` trailers to commit messages.
+
+Line length in commit messages:
+
+- Wrap the body at 72 characters.
+- Keep the subject line within 72 characters (aim for 50).
+- Separate the subject and the body with exactly one blank line.
+- Do not wrap footers (`Refs:`, etc.) or long unbreakable strings such as URLs and paths.
 
 ## Git workflow
 
